@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-11-18T13:40:04.563850+00:00",
+  "evaluation_type": "fairness",
+  "dataset": {
+    "path": "data\\synthetic_fairness_data.csv",
+    "total_records": 120,
+    "groups": [
+      "A",
+      "B"
+    ],
+    "seed": 42,
+    "generation_method": "Deterministic synthetic generation: 60 records per group, outcomes shuffled with a fixed seed. Group A has 48/60 successes (80%), Group B has 39/60 (65%). Scenarios cycle through the five existing support scenarios. Groups are synthetic labels, not real demographic groups."
+  },
+  "group_results": {
+    "A": {
+      "group": "A",
+      "total": 60,
+      "successful": 48,
+      "unsuccessful": 12,
+      "success_rate": 0.8,
+      "failure_rate": 0.2
+    },
+    "B": {
+      "group": "B",
+      "total": 60,
+      "successful": 39,
+      "unsuccessful": 21,
+      "success_rate": 0.65,
+      "failure_rate": 0.35
+    }
+  },
+  "comparison": {
+    "absolute_difference_pp": 15.0,
+    "success_rate_ratio": 0.8125,
+    "higher_success_group": "A",
+    "threshold_pp": 5.0,
+    "exceeds_threshold": true
+  },
+  "metric_definitions": {
+    "success_rate": "successful / total (0.0 if total == 0)",
+    "failure_rate": "unsuccessful / total (0.0 if total == 0)",
+    "absolute_difference_pp": "|rate_A - rate_B| * 100 (percentage points)",
+    "success_rate_ratio": "min(rate_A, rate_B) / max(rate_A, rate_B) when max > 0; 1.0 if both rates are 0.0; 0.0 if exactly one is 0.0",
+    "higher_success_group": "Label of the group with the higher success rate; 'equal' if identical",
+    "exceeds_threshold": "absolute_difference_pp > threshold_pp"
+  },
+  "threshold": {
+    "value_pp": 5.0,
+    "meaning": "Illustrative threshold for flagging a potentially meaningful difference. Not a legal or regulatory standard."
+  },
+  "interpretation": "Group A has a higher observed success rate (80.0% vs 65.0%). The absolute difference is 15.0 percentage points, which exceeds the illustrative threshold of 5.0 percentage points. This difference is illustrative and does not by itself establish unfairness or bias. Outcome-rate parity alone does not establish fairness. A small synthetic difference should not be used to label a group as disadvantaged without further investigation.",
+  "limitations": [
+    "The groups are synthetic labels (Group A, Group B). They do not represent real demographic, protected, or marginalised populations.",
+    "The dataset is small (120 records) and generated deterministically. It does not capture the complexity of real customer-support interactions or real-world variation.",
+    "Outcome-rate parity alone does not establish fairness. Fairness requires considering context, causation, confounders, and domain-specific definitions of equity.",
+    "This evaluation does not test for intersectional bias, calibration across subgroups, or disparate impact under legal standards.",
+    "Passing or failing the illustrative threshold does not imply legal or regulatory compliance.",
+    "The synthetic success rates (80% and 65%) were chosen to create a meaningful difference for illustration. They were not derived from real data or real customer outcomes."
+  ],
+  "recommendations": [
+    "Expand the evaluation to include more groups, subgroups, and intersectional analysis once real (de-identified) data is available.",
+    "Investigate the root cause of any observed disparity: is it due to scenario distribution, agent behavior, environment design, or confounding factors?",
+    "Consider additional fairness metrics beyond outcome parity: calibration, equalised odds, demographic parity, and procedural fairness.",
+    "Validate findings against real (de-identified) data before drawing any conclusions about real-world bias or fairness.",
+    "Engage domain experts, affected communities, and legal advisors before interpreting synthetic results as evidence of real-world bias or fairness."
+  ]
+}

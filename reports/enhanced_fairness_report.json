@@ -1,0 +1,1233 @@
+{
+  "comparison_to_original_report": {
+    "absolute_difference_pp": 15.0,
+    "dataset_total_records": 120,
+    "group_rates": {
+      "A": 0.8,
+      "B": 0.65
+    },
+    "note": "The original evaluation has no confidence interval and a single seed; its point estimate is shown only as a reference.",
+    "source": "reports/fairness_report.json (original, unchanged)"
+  },
+  "leave_one_scenario_out": {
+    "0": {
+      "A": {
+        "success_rate": 0.7247908410391898,
+        "success_rate_95ci": [
+          0.7060538299503747,
+          0.7427686287210333
+        ],
+        "successes": 1646,
+        "total": 2271
+      },
+      "B": {
+        "success_rate": 0.8333979077876792,
+        "success_rate_95ci": [
+          0.8185288708269464,
+          0.847275950636775
+        ],
+        "successes": 2151,
+        "total": 2581
+      },
+      "difference": {
+        "ci_excludes_zero": true,
+        "difference_95ci": [
+          -0.13193259118744485,
+          -0.08528154230953397
+        ],
+        "difference_95ci_pp": [
+          -13.193259118744486,
+          -8.528154230953398
+        ],
+        "difference_a_minus_b": -0.10860706674848941,
+        "difference_a_minus_b_pp": -10.860706674848942
+      }
+    },
+    "1": {
+      "A": {
+        "success_rate": 0.8087930319369556,
+        "success_rate_95ci": [
+          0.7926091844870834,
+          0.8239944055786169
+        ],
+        "successes": 1950,
+        "total": 2411
+      },
+      "B": {
+        "success_rate": 0.8225531914893617,
+        "success_rate_95ci": [
+          0.8065836123401544,
+          0.8374699212536099
+        ],
+        "successes": 1933,
+        "total": 2350
+      },
+      "difference": {
+        "ci_excludes_zero": false,
+        "difference_95ci": [
+          -0.03578314791923336,
+          0.008262828814421239
+        ],
+        "difference_95ci_pp": [
+          -3.5783147919233356,
+          0.8262828814421239
+        ],
+        "difference_a_minus_b": -0.01376015955240606,
+        "difference_a_minus_b_pp": -1.376015955240606
+      }
+    },
+    "2": {
+      "A": {
+        "success_rate": 0.7631247375052499,
+        "success_rate_95ci": [
+          0.7456315012759555,
+          0.779770269642499
+        ],
+        "successes": 1817,
+        "total": 2381
+      },
+      "B": {
+        "success_rate": 0.8214581607290804,
+        "success_rate_95ci": [
+          0.8056735847268792,
+          0.836221235843666
+        ],
+        "successes": 1983,
+        "total": 2414
+      },
+      "difference": {
+        "ci_excludes_zero": true,
+        "difference_95ci": [
+          -0.08124747466720214,
+          -0.03541937178045886
+        ],
+        "difference_95ci_pp": [
+          -8.124747466720214,
+          -3.5419371780458864
+        ],
+        "difference_a_minus_b": -0.058333423223830505,
+        "difference_a_minus_b_pp": -5.83334232238305
+      }
+    },
+    "3": {
+      "A": {
+        "success_rate": 0.7837951301427372,
+        "success_rate_95ci": [
+          0.7668134040344213,
+          0.7998629419560249
+        ],
+        "successes": 1867,
+        "total": 2382
+      },
+      "B": {
+        "success_rate": 0.7991169977924945,
+        "success_rate_95ci": [
+          0.7821161686808584,
+          0.8151048977875983
+        ],
+        "successes": 1810,
+        "total": 2265
+      },
+      "difference": {
+        "ci_excludes_zero": false,
+        "difference_95ci": [
+          -0.0386792604169226,
+          0.008035525117408012
+        ],
+        "difference_95ci_pp": [
+          -3.86792604169226,
+          0.8035525117408012
+        ],
+        "difference_a_minus_b": -0.015321867649757293,
+        "difference_a_minus_b_pp": -1.5321867649757293
+      }
+    },
+    "4": {
+      "A": {
+        "success_rate": 0.7452054794520548,
+        "success_rate_95ci": [
+          0.7279496461642279,
+          0.7617250566387905
+        ],
+        "successes": 1904,
+        "total": 2555
+      },
+      "B": {
+        "success_rate": 0.804602510460251,
+        "success_rate_95ci": [
+          0.7882222178731375,
+          0.8200051602457821
+        ],
+        "successes": 1923,
+        "total": 2390
+      },
+      "difference": {
+        "ci_excludes_zero": true,
+        "difference_95ci": [
+          -0.08259602067809829,
+          -0.03619804133829402
+        ],
+        "difference_95ci_pp": [
+          -8.25960206780983,
+          -3.619804133829402
+        ],
+        "difference_a_minus_b": -0.059397031008196155,
+        "difference_a_minus_b_pp": -5.9397031008196155
+      }
+    }
+  },
+  "limitations": [
+    "Synthetic Bernoulli outcomes only; no environment, agent, or policy is simulated here.",
+    "The group labels and all probabilities are arbitrary hand-chosen assumptions.",
+    "The per-scenario gaps intentionally alternate direction, so an overall rate can hide opposing differences.",
+    "The scenario mixes differ by group, which confounds the overall comparison; the standardized difference isolates the within-scenario part.",
+    "Confidence intervals describe sampling noise in this generator, not uncertainty about any real population.",
+    "Outcome-rate parity is only one fairness criterion; it does not establish fairness, and a difference does not establish bias."
+  ],
+  "metadata": {
+    "evaluation_type": "enhanced_fairness",
+    "generation_model": {
+      "note": "Outcomes are Bernoulli draws from the documented probabilities; scenario labels are drawn from the documented group mixes. The scenario-mix difference and the alternating per-scenario gaps are hand-chosen assumptions of the generator.",
+      "scenario_labels": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "scenario_mix": {
+        "A": [
+          0.25,
+          0.2,
+          0.2,
+          0.2,
+          0.15
+        ],
+        "B": [
+          0.15,
+          0.2,
+          0.2,
+          0.25,
+          0.2
+        ]
+      },
+      "success_probability_given_scenario": {
+        "A": [
+          0.9,
+          0.6,
+          0.8,
+          0.7,
+          0.88
+        ],
+        "B": [
+          0.72,
+          0.78,
+          0.8,
+          0.86,
+          0.88
+        ]
+      }
+    },
+    "groups": [
+      "A",
+      "B"
+    ],
+    "num_scenarios": 5,
+    "records_per_group_per_seed": 600,
+    "records_per_seed": 1200,
+    "scope_note": "Group A and Group B are synthetic labels, not real demographic or protected groups. This is not a real-world bias audit. Because the generating probabilities are chosen by hand, the observed difference is a property of this generator and must not be interpreted as discrimination or as evidence that either group is disadvantaged.",
+    "seeds": [
+      42,
+      7,
+      2026,
+      1234,
+      99
+    ],
+    "threshold_meaning": "Illustrative flagging threshold carried over from the original evaluation; not a legal or regulatory standard.",
+    "threshold_pp": 5.0,
+    "total_records": 6000
+  },
+  "per_seed": {
+    "1234": {
+      "A": {
+        "success_rate": 0.7866666666666666,
+        "success_rate_95ci": [
+          0.7521167781152647,
+          0.8175690467765613
+        ],
+        "successes": 472,
+        "total": 600
+      },
+      "B": {
+        "success_rate": 0.8266666666666667,
+        "success_rate_95ci": [
+          0.7943243738490342,
+          0.8548524963765349
+        ],
+        "successes": 496,
+        "total": 600
+      },
+      "difference": {
+        "ci_excludes_zero": false,
+        "difference_95ci": [
+          -0.08463116333617962,
+          0.00463116333617955
+        ],
+        "difference_95ci_pp": [
+          -8.463116333617963,
+          0.463116333617955
+        ],
+        "difference_a_minus_b": -0.040000000000000036,
+        "difference_a_minus_b_pp": -4.0000000000000036
+      },
+      "per_scenario": {
+        "0": {
+          "A": {
+            "success_rate": 0.9182389937106918,
+            "success_rate_95ci": [
+              0.8651464525228497,
+              0.9515981631036242
+            ],
+            "successes": 146,
+            "total": 159
+          },
+          "B": {
+            "success_rate": 0.6625,
+            "success_rate_95ci": [
+              0.5535631838362329,
+              0.7565454018777802
+            ],
+            "successes": 53,
+            "total": 80
+          }
+        },
+        "1": {
+          "A": {
+            "success_rate": 0.6071428571428571,
+            "success_rate_95ci": [
+              0.5145809444311987,
+              0.6925985144160546
+            ],
+            "successes": 68,
+            "total": 112
+          },
+          "B": {
+            "success_rate": 0.8721804511278195,
+            "success_rate_95ci": [
+              0.8048213737306374,
+              0.9186428359833675
+            ],
+            "successes": 116,
+            "total": 133
+          }
+        },
+        "2": {
+          "A": {
+            "success_rate": 0.7479674796747967,
+            "success_rate_95ci": [
+              0.6645245788736737,
+              0.8163901998739925
+            ],
+            "successes": 92,
+            "total": 123
+          },
+          "B": {
+            "success_rate": 0.7478991596638656,
+            "success_rate_95ci": [
+              0.662968544405184,
+              0.817324776424242
+            ],
+            "successes": 89,
+            "total": 119
+          }
+        },
+        "3": {
+          "A": {
+            "success_rate": 0.7565217391304347,
+            "success_rate_95ci": [
+              0.6706216825244925,
+              0.8258374698261993
+            ],
+            "successes": 87,
+            "total": 115
+          },
+          "B": {
+            "success_rate": 0.8733333333333333,
+            "success_rate_95ci": [
+              0.8106321928453123,
+              0.9173893565925509
+            ],
+            "successes": 131,
+            "total": 150
+          }
+        },
+        "4": {
+          "A": {
+            "success_rate": 0.8681318681318682,
+            "success_rate_95ci": [
+              0.7835113710706528,
+              0.9229296843311962
+            ],
+            "successes": 79,
+            "total": 91
+          },
+          "B": {
+            "success_rate": 0.9067796610169492,
+            "success_rate_95ci": [
+              0.8407592905282243,
+              0.9471489444260114
+            ],
+            "successes": 107,
+            "total": 118
+          }
+        }
+      }
+    },
+    "2026": {
+      "A": {
+        "success_rate": 0.7466666666666667,
+        "success_rate_95ci": [
+          0.7103719284710169,
+          0.7798228510870661
+        ],
+        "successes": 448,
+        "total": 600
+      },
+      "B": {
+        "success_rate": 0.81,
+        "success_rate_95ci": [
+          0.7766751116381932,
+          0.8393804896983165
+        ],
+        "successes": 486,
+        "total": 600
+      },
+      "difference": {
+        "ci_excludes_zero": true,
+        "difference_95ci": [
+          -0.11019984984960934,
+          -0.01646681681705736
+        ],
+        "difference_95ci_pp": [
+          -11.019984984960935,
+          -1.6466816817057361
+        ],
+        "difference_a_minus_b": -0.06333333333333335,
+        "difference_a_minus_b_pp": -6.333333333333336
+      },
+      "per_scenario": {
+        "0": {
+          "A": {
+            "success_rate": 0.9020979020979021,
+            "success_rate_95ci": [
+              0.84237297882786,
+              0.9407838377690716
+            ],
+            "successes": 129,
+            "total": 143
+          },
+          "B": {
+            "success_rate": 0.6666666666666666,
+            "success_rate_95ci": [
+              0.5642212433918371,
+              0.7554664004676025
+            ],
+            "successes": 60,
+            "total": 90
+          }
+        },
+        "1": {
+          "A": {
+            "success_rate": 0.5245901639344263,
+            "success_rate_95ci": [
+              0.4365817092674157,
+              0.6110972776494704
+            ],
+            "successes": 64,
+            "total": 122
+          },
+          "B": {
+            "success_rate": 0.7553956834532374,
+            "success_rate_95ci": [
+              0.6776998710026987,
+              0.8193542084811491
+            ],
+            "successes": 105,
+            "total": 139
+          }
+        },
+        "2": {
+          "A": {
+            "success_rate": 0.768,
+            "success_rate_95ci": [
+              0.6866850458237092,
+              0.8333333333333334
+            ],
+            "successes": 96,
+            "total": 125
+          },
+          "B": {
+            "success_rate": 0.8316831683168316,
+            "success_rate_95ci": [
+              0.7468861586113437,
+              0.8921731460921326
+            ],
+            "successes": 84,
+            "total": 101
+          }
+        },
+        "3": {
+          "A": {
+            "success_rate": 0.6982758620689655,
+            "success_rate_95ci": [
+              0.6094937015836649,
+              0.7743463005524881
+            ],
+            "successes": 81,
+            "total": 116
+          },
+          "B": {
+            "success_rate": 0.8767123287671232,
+            "success_rate_95ci": [
+              0.8135341353091184,
+              0.920574416655089
+            ],
+            "successes": 128,
+            "total": 146
+          }
+        },
+        "4": {
+          "A": {
+            "success_rate": 0.8297872340425532,
+            "success_rate_95ci": [
+              0.7412525861920534,
+              0.8924247044491462
+            ],
+            "successes": 78,
+            "total": 94
+          },
+          "B": {
+            "success_rate": 0.8790322580645161,
+            "success_rate_95ci": [
+              0.8099792338499885,
+              0.9253056812324258
+            ],
+            "successes": 109,
+            "total": 124
+          }
+        }
+      }
+    },
+    "42": {
+      "A": {
+        "success_rate": 0.7633333333333333,
+        "success_rate_95ci": [
+          0.7277150535163903,
+          0.7956009949307521
+        ],
+        "successes": 458,
+        "total": 600
+      },
+      "B": {
+        "success_rate": 0.8233333333333334,
+        "success_rate_95ci": [
+          0.7907868034892458,
+          0.8517658129585115
+        ],
+        "successes": 494,
+        "total": 600
+      },
+      "difference": {
+        "ci_excludes_zero": true,
+        "difference_95ci": [
+          -0.10569442789597813,
+          -0.014305572104021967
+        ],
+        "difference_95ci_pp": [
+          -10.569442789597813,
+          -1.4305572104021966
+        ],
+        "difference_a_minus_b": -0.06000000000000005,
+        "difference_a_minus_b_pp": -6.000000000000005
+      },
+      "per_scenario": {
+        "0": {
+          "A": {
+            "success_rate": 0.8980891719745223,
+            "success_rate_95ci": [
+              0.8408692077114227,
+              0.9362929194994482
+            ],
+            "successes": 141,
+            "total": 157
+          },
+          "B": {
+            "success_rate": 0.7088607594936709,
+            "success_rate_95ci": [
+              0.6008691203651904,
+              0.7974814667794325
+            ],
+            "successes": 56,
+            "total": 79
+          }
+        },
+        "1": {
+          "A": {
+            "success_rate": 0.5818181818181818,
+            "success_rate_95ci": [
+              0.4884039805903501,
+              0.6697104520950654
+            ],
+            "successes": 64,
+            "total": 110
+          },
+          "B": {
+            "success_rate": 0.8203125,
+            "success_rate_95ci": [
+              0.7447821997086049,
+              0.8771762716691697
+            ],
+            "successes": 105,
+            "total": 128
+          }
+        },
+        "2": {
+          "A": {
+            "success_rate": 0.7857142857142857,
+            "success_rate_95ci": [
+              0.7061770574215046,
+              0.8483447599313315
+            ],
+            "successes": 99,
+            "total": 126
+          },
+          "B": {
+            "success_rate": 0.8306451612903226,
+            "success_rate_95ci": [
+              0.7549376308983489,
+              0.8864811248118425
+            ],
+            "successes": 103,
+            "total": 124
+          }
+        },
+        "3": {
+          "A": {
+            "success_rate": 0.6614173228346457,
+            "success_rate_95ci": [
+              0.5754522310020593,
+              0.7379037658674379
+            ],
+            "successes": 84,
+            "total": 127
+          },
+          "B": {
+            "success_rate": 0.8455882352941176,
+            "success_rate_95ci": [
+              0.7754563190066779,
+              0.8967327863811323
+            ],
+            "successes": 115,
+            "total": 136
+          }
+        },
+        "4": {
+          "A": {
+            "success_rate": 0.875,
+            "success_rate_95ci": [
+              0.7849700281693438,
+              0.9306651696322249
+            ],
+            "successes": 70,
+            "total": 80
+          },
+          "B": {
+            "success_rate": 0.8646616541353384,
+            "success_rate_95ci": [
+              0.7962007135432557,
+              0.9126480575906685
+            ],
+            "successes": 115,
+            "total": 133
+          }
+        }
+      }
+    },
+    "7": {
+      "A": {
+        "success_rate": 0.78,
+        "success_rate_95ci": [
+          0.7451296735512731,
+          0.8113076437849291
+        ],
+        "successes": 468,
+        "total": 600
+      },
+      "B": {
+        "success_rate": 0.805,
+        "success_rate_95ci": [
+          0.7713984417486244,
+          0.8347207789211673
+        ],
+        "successes": 483,
+        "total": 600
+      },
+      "difference": {
+        "ci_excludes_zero": false,
+        "difference_95ci": [
+          -0.07086672214143934,
+          0.020866722141439295
+        ],
+        "difference_95ci_pp": [
+          -7.086672214143934,
+          2.0866722141439293
+        ],
+        "difference_a_minus_b": -0.025000000000000022,
+        "difference_a_minus_b_pp": -2.500000000000002
+      },
+      "per_scenario": {
+        "0": {
+          "A": {
+            "success_rate": 0.8904109589041096,
+            "success_rate_95ci": [
+              0.8293929061084429,
+              0.9314105022908268
+            ],
+            "successes": 130,
+            "total": 146
+          },
+          "B": {
+            "success_rate": 0.7294117647058823,
+            "success_rate_95ci": [
+              0.6265784025645939,
+              0.8124051366782833
+            ],
+            "successes": 62,
+            "total": 85
+          }
+        },
+        "1": {
+          "A": {
+            "success_rate": 0.6521739130434783,
+            "success_rate_95ci": [
+              0.5614819530608828,
+              0.7330277135878329
+            ],
+            "successes": 75,
+            "total": 115
+          },
+          "B": {
+            "success_rate": 0.7727272727272727,
+            "success_rate_95ci": [
+              0.6941201566285526,
+              0.8359089360794247
+            ],
+            "successes": 102,
+            "total": 132
+          }
+        },
+        "2": {
+          "A": {
+            "success_rate": 0.76,
+            "success_rate_95ci": [
+              0.6780950439664866,
+              0.8264003984993009
+            ],
+            "successes": 95,
+            "total": 125
+          },
+          "B": {
+            "success_rate": 0.8294573643410853,
+            "success_rate_95ci": [
+              0.7552650521256196,
+              0.8845947508276722
+            ],
+            "successes": 107,
+            "total": 129
+          }
+        },
+        "3": {
+          "A": {
+            "success_rate": 0.6946564885496184,
+            "success_rate_95ci": [
+              0.6111769763005397,
+              0.7670445814383184
+            ],
+            "successes": 91,
+            "total": 131
+          },
+          "B": {
+            "success_rate": 0.8705035971223022,
+            "success_rate_95ci": [
+              0.8045840204547371,
+              0.9164944328809858
+            ],
+            "successes": 121,
+            "total": 139
+          }
+        },
+        "4": {
+          "A": {
+            "success_rate": 0.927710843373494,
+            "success_rate_95ci": [
+              0.8511303528251295,
+              0.9664501615827119
+            ],
+            "successes": 77,
+            "total": 83
+          },
+          "B": {
+            "success_rate": 0.7913043478260869,
+            "success_rate_95ci": [
+              0.7082200439609929,
+              0.8555556036236911
+            ],
+            "successes": 91,
+            "total": 115
+          }
+        }
+      }
+    },
+    "99": {
+      "A": {
+        "success_rate": 0.75,
+        "success_rate_95ci": [
+          0.713835073270128,
+          0.7829839600657669
+        ],
+        "successes": 450,
+        "total": 600
+      },
+      "B": {
+        "success_rate": 0.8183333333333334,
+        "success_rate_95ci": [
+          0.7854878121325714,
+          0.8471284236484681
+        ],
+        "successes": 491,
+        "total": 600
+      },
+      "difference": {
+        "ci_excludes_zero": true,
+        "difference_95ci": [
+          -0.11472670921746067,
+          -0.02193995744920605
+        ],
+        "difference_95ci_pp": [
+          -11.472670921746067,
+          -2.193995744920605
+        ],
+        "difference_a_minus_b": -0.06833333333333336,
+        "difference_a_minus_b_pp": -6.833333333333336
+      },
+      "per_scenario": {
+        "0": {
+          "A": {
+            "success_rate": 0.8387096774193549,
+            "success_rate_95ci": [
+              0.7639669535011913,
+              0.8930961621043707
+            ],
+            "successes": 104,
+            "total": 124
+          },
+          "B": {
+            "success_rate": 0.8,
+            "success_rate_95ci": [
+              0.7028443198871105,
+              0.8712110775843444
+            ],
+            "successes": 68,
+            "total": 85
+          }
+        },
+        "1": {
+          "A": {
+            "success_rate": 0.5769230769230769,
+            "success_rate_95ci": [
+              0.49098536167114193,
+              0.6584450097529893
+            ],
+            "successes": 75,
+            "total": 130
+          },
+          "B": {
+            "success_rate": 0.7542372881355932,
+            "success_rate_95ci": [
+              0.6693534897050439,
+              0.8230891571413532
+            ],
+            "successes": 89,
+            "total": 118
+          }
+        },
+        "2": {
+          "A": {
+            "success_rate": 0.8083333333333333,
+            "success_rate_95ci": [
+              0.7287868300416364,
+              0.8687506694738739
+            ],
+            "successes": 97,
+            "total": 120
+          },
+          "B": {
+            "success_rate": 0.7433628318584071,
+            "success_rate_95ci": [
+              0.6557596067410855,
+              0.8149631495375004
+            ],
+            "successes": 84,
+            "total": 113
+          }
+        },
+        "3": {
+          "A": {
+            "success_rate": 0.6666666666666666,
+            "success_rate_95ci": [
+              0.5815375061875019,
+              0.7421562764829868
+            ],
+            "successes": 86,
+            "total": 129
+          },
+          "B": {
+            "success_rate": 0.8841463414634146,
+            "success_rate_95ci": [
+              0.8261422557480823,
+              0.9245655544729833
+            ],
+            "successes": 145,
+            "total": 164
+          }
+        },
+        "4": {
+          "A": {
+            "success_rate": 0.9072164948453608,
+            "success_rate_95ci": [
+              0.8329895046109212,
+              0.9504173433565841
+            ],
+            "successes": 88,
+            "total": 97
+          },
+          "B": {
+            "success_rate": 0.875,
+            "success_rate_95ci": [
+              0.8039690855177497,
+              0.9227657111903032
+            ],
+            "successes": 105,
+            "total": 120
+          }
+        }
+      }
+    }
+  },
+  "pooled": {
+    "difference": {
+      "bootstrap": {
+        "ci_excludes_zero": true,
+        "difference_95ci": [
+          -0.07167499999999997,
+          -0.03265000000000005
+        ],
+        "difference_95ci_pp": [
+          -7.167499999999998,
+          -3.2650000000000046
+        ],
+        "difference_a_minus_b": -0.05133333333333334,
+        "n_resamples": 2000,
+        "seed": 20261117
+      },
+      "ci_excludes_zero": true,
+      "difference_95ci": [
+        -0.0718688101103468,
+        -0.030797856556319878
+      ],
+      "difference_95ci_pp": [
+        -7.18688101103468,
+        -3.0797856556319876
+      ],
+      "difference_a_minus_b": -0.05133333333333334,
+      "difference_a_minus_b_pp": -5.133333333333335
+    },
+    "groups": {
+      "A": {
+        "success_rate": 0.7653333333333333,
+        "success_rate_95ci": [
+          0.7498347604173204,
+          0.7801532389498899
+        ],
+        "successes": 2296,
+        "total": 3000
+      },
+      "B": {
+        "success_rate": 0.8166666666666667,
+        "success_rate_95ci": [
+          0.8024181606313913,
+          0.8301052054475658
+        ],
+        "successes": 2450,
+        "total": 3000
+      }
+    },
+    "n_records": 6000
+  },
+  "scenario_distribution_analysis": {
+    "decomposition_residual_pp": -4.163336342344337e-15,
+    "group_scenario_shares": {
+      "A": {
+        "0": 0.243,
+        "1": 0.19633333333333333,
+        "2": 0.20633333333333334,
+        "3": 0.206,
+        "4": 0.14833333333333334
+      },
+      "B": {
+        "0": 0.13966666666666666,
+        "1": 0.21666666666666667,
+        "2": 0.19533333333333333,
+        "3": 0.245,
+        "4": 0.20333333333333334
+      }
+    },
+    "interpretation": "The within-scenario term is the rate difference that would remain if both groups had the same scenario mix; the mix term is the part explained by the different scenario distributions. A non-zero mix term means the overall comparison is confounded by scenario composition.",
+    "naive_difference_pp": -5.133333333333335,
+    "per_scenario": {
+      "0": {
+        "difference_pp": 17.802855449810274,
+        "rate_a": 0.8916323731138546,
+        "rate_b": 0.7136038186157518,
+        "weight_a": 0.243,
+        "weight_b": 0.13966666666666666,
+        "weight_common": 0.19133333333333333,
+        "weighted_contribution_pp": 3.406279676063699
+      },
+      "1": {
+        "difference_pp": -20.7948282617213,
+        "rate_a": 0.5874363327674024,
+        "rate_b": 0.7953846153846154,
+        "weight_a": 0.19633333333333333,
+        "weight_b": 0.21666666666666667,
+        "weight_common": 0.20650000000000002,
+        "weighted_contribution_pp": -4.294132036045449
+      },
+      "2": {
+        "difference_pp": -2.3099571586892798,
+        "rate_a": 0.7738287560581584,
+        "rate_b": 0.7969283276450512,
+        "weight_a": 0.20633333333333334,
+        "weight_b": 0.19533333333333333,
+        "weight_common": 0.20083333333333334,
+        "weighted_contribution_pp": -0.4639163960367637
+      },
+      "3": {
+        "difference_pp": -17.657354203817444,
+        "rate_a": 0.6941747572815534,
+        "rate_b": 0.8707482993197279,
+        "weight_a": 0.206,
+        "weight_b": 0.245,
+        "weight_common": 0.22549999999999998,
+        "weighted_contribution_pp": -3.981733372960833
+      },
+      "4": {
+        "difference_pp": 1.6964450174986156,
+        "rate_a": 0.8808988764044944,
+        "rate_b": 0.8639344262295082,
+        "weight_a": 0.14833333333333334,
+        "weight_b": 0.20333333333333334,
+        "weight_common": 0.17583333333333334,
+        "weighted_contribution_pp": 0.2982915822435066
+      }
+    },
+    "scenario_mix_difference_pp": -0.09812278659749041,
+    "standardized_difference_pp": -5.0352105467358355,
+    "standardized_rates_common_mix": {
+      "A": 0.7587429988153802,
+      "B": 0.8090951042827386
+    },
+    "within_scenario_difference_pp": -5.03521054673584
+  },
+  "scenario_level": {
+    "0": {
+      "A": {
+        "success_rate": 0.8916323731138546,
+        "success_rate_95ci": [
+          0.8669802102697439,
+          0.9121786147751225
+        ],
+        "successes": 650,
+        "total": 729
+      },
+      "B": {
+        "success_rate": 0.7136038186157518,
+        "success_rate_95ci": [
+          0.6685292184968481,
+          0.7547971524184072
+        ],
+        "successes": 299,
+        "total": 419
+      },
+      "difference": {
+        "ci_excludes_zero": true,
+        "difference_95ci": [
+          0.12921282644638463,
+          0.22684428254982084
+        ],
+        "difference_95ci_pp": [
+          12.921282644638463,
+          22.684428254982084
+        ],
+        "difference_a_minus_b": 0.17802855449810273,
+        "difference_a_minus_b_pp": 17.802855449810274
+      }
+    },
+    "1": {
+      "A": {
+        "success_rate": 0.5874363327674024,
+        "success_rate_95ci": [
+          0.5472367415818676,
+          0.6265027530824744
+        ],
+        "successes": 346,
+        "total": 589
+      },
+      "B": {
+        "success_rate": 0.7953846153846154,
+        "success_rate_95ci": [
+          0.7626777313045937,
+          0.824620476701749
+        ],
+        "successes": 517,
+        "total": 650
+      },
+      "difference": {
+        "ci_excludes_zero": true,
+        "difference_95ci": [
+          -0.2583721093727228,
+          -0.15752445586170316
+        ],
+        "difference_95ci_pp": [
+          -25.837210937272282,
+          -15.752445586170316
+        ],
+        "difference_a_minus_b": -0.207948282617213,
+        "difference_a_minus_b_pp": -20.7948282617213
+      }
+    },
+    "2": {
+      "A": {
+        "success_rate": 0.7738287560581584,
+        "success_rate_95ci": [
+          0.7392409137992195,
+          0.8050387232706231
+        ],
+        "successes": 479,
+        "total": 619
+      },
+      "B": {
+        "success_rate": 0.7969283276450512,
+        "success_rate_95ci": [
+          0.7624713627565042,
+          0.8275175427394798
+        ],
+        "successes": 467,
+        "total": 586
+      },
+      "difference": {
+        "ci_excludes_zero": false,
+        "difference_95ci": [
+          -0.06943644762307843,
+          0.02323730444929284
+        ],
+        "difference_95ci_pp": [
+          -6.943644762307843,
+          2.323730444929284
+        ],
+        "difference_a_minus_b": -0.023099571586892798,
+        "difference_a_minus_b_pp": -2.3099571586892798
+      }
+    },
+    "3": {
+      "A": {
+        "success_rate": 0.6941747572815534,
+        "success_rate_95ci": [
+          0.6567404296134123,
+          0.7292099474601061
+        ],
+        "successes": 429,
+        "total": 618
+      },
+      "B": {
+        "success_rate": 0.8707482993197279,
+        "success_rate_95ci": [
+          0.8445534104109667,
+          0.8930877835878552
+        ],
+        "successes": 640,
+        "total": 735
+      },
+      "difference": {
+        "ci_excludes_zero": true,
+        "difference_95ci": [
+          -0.2202531743470048,
+          -0.13289390972934406
+        ],
+        "difference_95ci_pp": [
+          -22.02531743470048,
+          -13.289390972934406
+        ],
+        "difference_a_minus_b": -0.17657354203817444,
+        "difference_a_minus_b_pp": -17.657354203817444
+      }
+    },
+    "4": {
+      "A": {
+        "success_rate": 0.8808988764044944,
+        "success_rate_95ci": [
+          0.8474958609726625,
+          0.9077817247056704
+        ],
+        "successes": 392,
+        "total": 445
+      },
+      "B": {
+        "success_rate": 0.8639344262295082,
+        "success_rate_95ci": [
+          0.8344380641929058,
+          0.8888755724195362
+        ],
+        "successes": 527,
+        "total": 610
+      },
+      "difference": {
+        "ci_excludes_zero": false,
+        "difference_95ci": [
+          -0.023606799672207746,
+          0.05753570002218006
+        ],
+        "difference_95ci_pp": [
+          -2.3606799672207748,
+          5.753570002218006
+        ],
+        "difference_a_minus_b": 0.016964450174986156,
+        "difference_a_minus_b_pp": 1.6964450174986156
+      }
+    }
+  },
+  "seed_difference_summary_pp": {
+    "max": -2.500000000000002,
+    "mean": -5.133333333333336,
+    "min": -6.833333333333336,
+    "note": "Per-seed estimates vary considerably at 600 records per group; the spread shows why a single-seed result is fragile.",
+    "std": 1.823458252881047,
+    "values": [
+      -6.000000000000005,
+      -2.500000000000002,
+      -6.333333333333336,
+      -4.0000000000000036,
+      -6.833333333333336
+    ]
+  }
+}

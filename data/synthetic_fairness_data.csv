@@ -1,0 +1,121 @@
+record_id,group,scenario_id,scenario_name,turns,total_reward,outcome,termination_reason
+1,A,0,Internet Connection Problem,5,10.5,1,resolved
+2,A,1,Router Malfunction,5,10.5,1,resolved
+3,A,2,Account Login Problem,10,2.43,0,escalated
+4,A,3,Password Reset Request,5,10.5,1,resolved
+5,A,4,Billing Issue,5,10.5,1,resolved
+6,A,0,Internet Connection Problem,5,10.5,1,resolved
+7,A,1,Router Malfunction,15,-8.65,0,truncated
+8,A,2,Account Login Problem,15,-5.37,0,truncated
+9,A,3,Password Reset Request,5,10.5,1,resolved
+10,A,4,Billing Issue,5,10.5,1,resolved
+11,A,0,Internet Connection Problem,5,10.5,1,resolved
+12,A,1,Router Malfunction,5,10.5,1,resolved
+13,A,2,Account Login Problem,5,10.5,1,resolved
+14,A,3,Password Reset Request,5,10.5,1,resolved
+15,A,4,Billing Issue,5,10.5,1,resolved
+16,A,0,Internet Connection Problem,2,2.28,0,escalated
+17,A,1,Router Malfunction,5,10.5,1,resolved
+18,A,2,Account Login Problem,5,10.5,1,resolved
+19,A,3,Password Reset Request,7,-0.61,0,escalated
+20,A,4,Billing Issue,5,10.5,1,resolved
+21,A,0,Internet Connection Problem,5,10.5,1,resolved
+22,A,1,Router Malfunction,5,10.5,1,resolved
+23,A,2,Account Login Problem,6,-1.19,0,escalated
+24,A,3,Password Reset Request,5,10.5,1,resolved
+25,A,4,Billing Issue,5,10.5,1,resolved
+26,A,0,Internet Connection Problem,5,10.5,1,resolved
+27,A,1,Router Malfunction,5,10.5,1,resolved
+28,A,2,Account Login Problem,5,10.5,1,resolved
+29,A,3,Password Reset Request,5,10.5,1,resolved
+30,A,4,Billing Issue,15,-5.31,0,truncated
+31,A,0,Internet Connection Problem,5,10.5,1,resolved
+32,A,1,Router Malfunction,5,10.5,1,resolved
+33,A,2,Account Login Problem,5,10.5,1,resolved
+34,A,3,Password Reset Request,5,10.5,1,resolved
+35,A,4,Billing Issue,2,1.05,0,escalated
+36,A,0,Internet Connection Problem,5,10.5,1,resolved
+37,A,1,Router Malfunction,5,10.5,1,resolved
+38,A,2,Account Login Problem,5,10.5,1,resolved
+39,A,3,Password Reset Request,5,10.5,1,resolved
+40,A,4,Billing Issue,15,-4.9,0,truncated
+41,A,0,Internet Connection Problem,5,10.5,1,resolved
+42,A,1,Router Malfunction,5,10.5,1,resolved
+43,A,2,Account Login Problem,15,-7.34,0,truncated
+44,A,3,Password Reset Request,5,10.5,1,resolved
+45,A,4,Billing Issue,5,10.5,1,resolved
+46,A,0,Internet Connection Problem,5,10.5,1,resolved
+47,A,1,Router Malfunction,5,10.5,1,resolved
+48,A,2,Account Login Problem,5,10.5,1,resolved
+49,A,3,Password Reset Request,9,-0.9,0,escalated
+50,A,4,Billing Issue,5,10.5,1,resolved
+51,A,0,Internet Connection Problem,5,10.5,1,resolved
+52,A,1,Router Malfunction,15,-4.62,0,truncated
+53,A,2,Account Login Problem,5,10.5,1,resolved
+54,A,3,Password Reset Request,5,10.5,1,resolved
+55,A,4,Billing Issue,5,10.5,1,resolved
+56,A,0,Internet Connection Problem,5,10.5,1,resolved
+57,A,1,Router Malfunction,5,10.5,1,resolved
+58,A,2,Account Login Problem,5,10.5,1,resolved
+59,A,3,Password Reset Request,5,10.5,1,resolved
+60,A,4,Billing Issue,5,10.5,1,resolved
+61,B,0,Internet Connection Problem,15,-9.98,0,truncated
+62,B,1,Router Malfunction,5,10.5,1,resolved
+63,B,2,Account Login Problem,5,2.86,0,escalated
+64,B,3,Password Reset Request,5,10.5,1,resolved
+65,B,4,Billing Issue,5,10.5,1,resolved
+66,B,0,Internet Connection Problem,5,10.5,1,resolved
+67,B,1,Router Malfunction,5,10.5,1,resolved
+68,B,2,Account Login Problem,5,10.5,1,resolved
+69,B,3,Password Reset Request,5,10.5,1,resolved
+70,B,4,Billing Issue,5,10.5,1,resolved
+71,B,0,Internet Connection Problem,5,10.5,1,resolved
+72,B,1,Router Malfunction,5,10.5,1,resolved
+73,B,2,Account Login Problem,5,10.5,1,resolved
+74,B,3,Password Reset Request,5,10.5,1,resolved
+75,B,4,Billing Issue,5,10.5,1,resolved
+76,B,0,Internet Connection Problem,9,2.56,0,escalated
+77,B,1,Router Malfunction,5,2.21,0,escalated
+78,B,2,Account Login Problem,5,10.5,1,resolved
+79,B,3,Password Reset Request,5,10.5,1,resolved
+80,B,4,Billing Issue,4,-1.24,0,escalated
+81,B,0,Internet Connection Problem,5,10.5,1,resolved
+82,B,1,Router Malfunction,9,2.77,0,escalated
+83,B,2,Account Login Problem,1,0.99,0,escalated
+84,B,3,Password Reset Request,15,-9.22,0,truncated
+85,B,4,Billing Issue,5,10.5,1,resolved
+86,B,0,Internet Connection Problem,5,10.5,1,resolved
+87,B,1,Router Malfunction,15,-3.1,0,truncated
+88,B,2,Account Login Problem,5,10.5,1,resolved
+89,B,3,Password Reset Request,4,-1.71,0,escalated
+90,B,4,Billing Issue,2,-1.57,0,escalated
+91,B,0,Internet Connection Problem,5,10.5,1,resolved
+92,B,1,Router Malfunction,5,10.5,1,resolved
+93,B,2,Account Login Problem,15,-9.52,0,truncated
+94,B,3,Password Reset Request,5,10.5,1,resolved
+95,B,4,Billing Issue,3,-1.36,0,escalated
+96,B,0,Internet Connection Problem,5,10.5,1,resolved
+97,B,1,Router Malfunction,5,10.5,1,resolved
+98,B,2,Account Login Problem,5,10.5,1,resolved
+99,B,3,Password Reset Request,5,10.5,1,resolved
+100,B,4,Billing Issue,5,10.5,1,resolved
+101,B,0,Internet Connection Problem,5,10.5,1,resolved
+102,B,1,Router Malfunction,5,10.5,1,resolved
+103,B,2,Account Login Problem,15,-6.15,0,truncated
+104,B,3,Password Reset Request,15,-3.89,0,truncated
+105,B,4,Billing Issue,5,10.5,1,resolved
+106,B,0,Internet Connection Problem,15,-8.52,0,truncated
+107,B,1,Router Malfunction,4,1.56,0,escalated
+108,B,2,Account Login Problem,15,-5.3,0,truncated
+109,B,3,Password Reset Request,15,-3.7,0,truncated
+110,B,4,Billing Issue,5,10.5,1,resolved
+111,B,0,Internet Connection Problem,5,10.5,1,resolved
+112,B,1,Router Malfunction,5,10.5,1,resolved
+113,B,2,Account Login Problem,5,10.5,1,resolved
+114,B,3,Password Reset Request,5,10.5,1,resolved
+115,B,4,Billing Issue,5,10.5,1,resolved
+116,B,0,Internet Connection Problem,15,-8.26,0,truncated
+117,B,1,Router Malfunction,5,10.5,1,resolved
+118,B,2,Account Login Problem,15,-9.85,0,truncated
+119,B,3,Password Reset Request,5,10.5,1,resolved
+120,B,4,Billing Issue,5,10.5,1,resolved

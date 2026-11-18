@@ -1,0 +1,15 @@
+# Virtual environments
+.venv/
+venv/
+
+# Byte-compiled / cache files
+__pycache__/
+*.pyc
+
+# Pytest & coverage
+.pytest_cache/
+.coverage
+
+# Distribution / packaging
+dist/
+build/
